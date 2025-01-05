@@ -29,6 +29,9 @@ return {
         opts.desc = "Show LSP references"
         keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
+	opts.desc = "format the code"
+	vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, opts)
+
         opts.desc = "Go to declaration"
         keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
